@@ -1,0 +1,1 @@
+my_django is a ICALC class-created project about django and git written in May 2023.
