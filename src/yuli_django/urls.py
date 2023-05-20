@@ -18,14 +18,13 @@ from django.urls import path
 
 from .views import (
     home_page,
-    about_page
+    about_page,
+    contact_page
 )
-
-from project.views import project_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page),
     path('about/', about_page),
-    path('project/<str:post_id>', project_page),
+    path('contact/', contact_page)
 ]

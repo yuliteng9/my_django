@@ -8,4 +8,9 @@ def home_page(request):
     return render(request, "home_page.html")
 
 def about_page(request):
-    return HttpResponse("<h1>Welcome to About Page</h1>")
+    # return HttpResponse("<h1>Welcome to About Page</h1>")
+    return render(request, "about_page.html")
+
+def contact_page(request):
+    # return HttpResponse("<h1>Welcome to Contact Page</h1>")
+    return render(request, "contact_page.html")
