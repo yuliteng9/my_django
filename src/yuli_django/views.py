@@ -5,7 +5,7 @@ from django.shortcuts import render
 # One web view is one function in this views.py file.
 def home_page(request):
     my_title = "My Home Page"
-    return render(request, "home_page.html", {"h1":my_title, "title":"HOME"})
+    return render(request, "home_page.html", {"h1":my_title, "title":"HOME", "button_text":"Home Button"})
 
 def about_page(request):
     return render(request, "about_page.html", {"h1":"About us", "title":"ABOUT"})
