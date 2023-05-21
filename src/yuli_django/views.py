@@ -1,20 +1,28 @@
 # Model View Template (MVT)
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template.loader import get_template
 
 # One web view is one function in this views.py file.
 def home_page(request):
     my_title = "My Home Page"
-    return render(request, "home_page.html", {"h1":my_title, "title":"HOME", "button_text":"Home Button"})
+    replacement = {"h1":my_title, "title":"HOME", "button_text":"Home Button", "my_list":[1,2,3,4,5]}
+    return render(request, "home_page.html", replacement)
 
 def about_page(request):
-    return render(request, "about_page.html", {"h1":"About us", "title":"ABOUT"})
+    context = {"h1":"About us", "title":"ABOUT"}
+    return render(request, "about_page.html", context)
 
 def contact_page(request):
-    return render(request, "contact_page.html", {"h1":"Contact us", "title":"CONTACT"})
+    context = {"h1":"Contact us", "title":"CONTACT"}
+    return render(request, "contact_page.html", context)
 
 def example(request):
-    return render(request, "home_page.html", {"h1":"example", "title":"EXAMPLE"})
+    context = {"h1": "Example", "title": "EXAMPLE"}
+    template_name = "Strings.txt"  # template_name = "Strings-ch.txt"
+    template_obj = get_template(template_name)
+    rendered_string = template_obj.render(context)
+    return render(request, "about_page.html", {"text_file": rendered_string, "h1": "Example"})
 
 def Project(request):
     return render(request, "project_page.html", {"h1":"Project Page", "title":"Project"})
