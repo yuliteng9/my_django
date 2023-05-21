@@ -20,7 +20,8 @@ from .views import (
     home_page,
     about_page,
     contact_page,
-    example
+    example,
+    Project
 )
 
 urlpatterns = [
@@ -28,5 +29,6 @@ urlpatterns = [
     path('', home_page),
     path('about/', about_page),
     path('contact/', contact_page),
-    path('example/', example)
+    path('example/', example),
+    path('project/', Project)
 ]
