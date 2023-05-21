@@ -17,4 +17,4 @@ def example(request):
     return render(request, "home_page.html", {"h1":"example", "title":"EXAMPLE"})
 
 def Project(request):
-    return render(request, "project_page.html", {"h1":"Project Page", "title":"PROJECT"})
+    return render(request, "project_page.html", {"h1":"Project Page", "title":"Project"})
