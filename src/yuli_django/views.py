@@ -13,5 +13,5 @@ def about_page(request):
 def contact_page(request):
     return render(request, "home_page.html", {"h1":"Contact us", "title":"CONTACT"})
 
-def example_page(request):
+def example(request):
     return render(request, "home_page.html", {"h1":"example", "title":"example"})
