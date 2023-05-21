@@ -4,13 +4,14 @@ from django.shortcuts import render
 
 # One web view is one function in this views.py file.
 def home_page(request):
-    # return HttpResponse("<h1>My Home Page</h1>")
-    return render(request, "home_page.html")
+    my_title = "My Home Page"
+    return render(request, "home_page.html", {"h1":my_title, "title":"HOME"})
 
 def about_page(request):
-    # return HttpResponse("<h1>Welcome to About Page</h1>")
-    return render(request, "about_page.html")
+    return render(request, "home_page.html", {"h1":"About us", "title":"ABOUT"})
 
 def contact_page(request):
-    # return HttpResponse("<h1>Welcome to Contact Page</h1>")
-    return render(request, "contact_page.html")
+    return render(request, "home_page.html", {"h1":"Contact us", "title":"CONTACT"})
+
+def example_page(request):
+    return render(request, "home_page.html", {"h1":"example", "title":"example"})
