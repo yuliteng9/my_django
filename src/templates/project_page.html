@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<button class="favorite styled" type="button">CLICK ME!</button>
-<p>
-    This is an HTML page part of the my_django project. There are 5 pages linked to the
-    http://127.0.0.1:8000 website: the home_page, /about/, /contact/, /example/, /project/, and /admin/.
-</p>
+    <h1> {{ object.codes }} </h1>
+    <p> {{ object.description }} </p>
 {% endblock %}

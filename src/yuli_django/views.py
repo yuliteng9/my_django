@@ -26,6 +26,6 @@ def example(request):
     return render(request, "about_page.html", context)
 
 
-def project(request):
-    context = {"h1": "Project Page", "title": "Project"}
-    return render(request, "project_page.html", context)
+def intro_page(request):
+    context = {"h1": "Intro", "title": "Project"}
+    return render(request, "intro_page.html", context)

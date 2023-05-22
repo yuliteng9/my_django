@@ -21,11 +21,15 @@ from .views import (
     about_page,
     contact_page,
     example,
-    project
+    intro_page,
 )
 
 from blog.views import (
     blog_post_detail_page
+)
+
+from Project.views import (
+    project_post_page
 )
 
 urlpatterns = [
@@ -34,6 +38,7 @@ urlpatterns = [
     path('about/', about_page),
     path('contact/', contact_page),
     path('example/', example),
-    path('project/', project),
-    path('blog/', blog_post_detail_page)
+    path('intro/', intro_page),
+    path('blog/', blog_post_detail_page),
+    path('project/', project_post_page)
 ]
