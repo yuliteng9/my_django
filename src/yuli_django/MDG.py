@@ -12,7 +12,7 @@ class MothersDayGame:
         # Load the background music.
         pygame.mixer.init()
         pygame.mixer.music.load("blue_danube.mp3")  # Replace with your music clip.
-#        pygame.mixer.music.play(-1)  # play the music in a loop.
+        pygame.mixer.music.play(-1)  # play the music in a loop.
 
         # Create a label for the game instructions.
         # the font parameter used when defining widgets is optional.
