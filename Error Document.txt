@@ -36,3 +36,5 @@ add app_name to INSTALLED_APPS list in settings.py
 
 11. Unreachable Error in views.py:
 Syntax Error when implementing context dictionary in views.py
+
+* refer to https://www.infidigit.com/blog/http-status-codes for 
