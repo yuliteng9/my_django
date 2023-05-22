@@ -8,3 +8,6 @@ class BlogPost(models.Model):
 
 class Comment(models.Model):
     comment = models.TextField()
+
+class Author(models.Model):
+    name = models.TextField()

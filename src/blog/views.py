@@ -4,11 +4,11 @@ from django.shortcuts import render
 from .models import BlogPost
 from .models import Comment
 
-def blog_post_detail_page(request):
-    article = BlogPost.objects.get(id=1) # query -> database -> data -> django render it
+def blog_post_detail_page(request, post_id=1):
+    blog_post = BlogPost.objects.get(id=post_id) # query -> database -> data -> django render it
     comments = []
     for _ in range(3, 5):
         comments.append(Comment.objects.get(id=_))  # query -> database -> data -> django render it
     template_name = "blog_post_detail.html"
-    context = {"object":article, "comments_list":comments}
+    context = {"article":blog_post, "comments_list":comments}
     return render(request, template_name, context)
