@@ -40,5 +40,5 @@ urlpatterns = [
     path('hwk/', project_post_page_l27),
     path('hwk/<int:post_id>/', project_post_page_l27),
     path('project/', project_post_page),
-    path('project/<int:post_id>', project_post_page)
+    path('project/<str:post_id>', project_post_page)
 ]
