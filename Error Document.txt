@@ -1,0 +1,38 @@
+1. VCS Error in PyCharm:
+update Python Intepreter to 3.10 from button at bottom-right corner
+
+2. PageNotFoundError:
+	i) add html file name and function to urls.py in yuli_django folder
+	ii) naming has typo
+	iii) there is no value satisfying the condition in views.py (eg:title="My Content")
+
+3. Error after Modifying Something:
+redownload code from my own GitHub
+
+4. Error with code 500:
+use pipenv shell (activate virtual environment) in Windows PowerShell
+
+
+5. 'manage.py' not an existing directory:
+enter src folder in Windows PowerShell because that's where the manage.py file is stored
+
+6. [variable] is not defined
+	i) naming has typo
+	ii) failed to import variable from another file
+
+7. Unresolved reference [variable] when trying to get variable from another file
+double-check file path for any errors. 
+
+8. Logic Errors when checking
+	i) refresh the page
+	ii) check urls.py if the function matches with the correct html ending
+
+9. No Module Named [app_name]
+add app_name to INSTALLED_APPS list in settings.py
+
+10. Failed to operate 'python manage.py runserver':
+	i) refer to Error #5 & #12
+	ii) use python manage.py make_migrations and python manage.py migrate if there were any changes to models.py
+
+11. Unreachable Error in views.py:
+Syntax Error when implementing context dictionary in views.py
