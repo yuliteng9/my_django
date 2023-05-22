@@ -25,7 +25,7 @@ from .views import (
 )
 
 from blog.views import blog_post_detail_page
-from Project.views import project_post_page
+from Project.views import project_post_page_l27
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,6 +36,6 @@ urlpatterns = [
     path('intro/', intro_page),
     path('blog/', blog_post_detail_page),
     path('blog/<int:post_id>/', blog_post_detail_page),
-    path('project/', project_post_page),
-    path('project/<int:post_id>/', project_post_page)
+    path('project/', project_post_page_l27),
+    path('project/<int:post_id>/', project_post_page_l27)
 ]
