@@ -29,7 +29,7 @@ class MothersDayGame:
     def increment_score(self):
         self.score += 1
         self.score_label.configure(text="Score: {}".format(self.score))
-        self.button.place(x=random.randint(0, 500), y=random.randint(0, 500))
+        self.button.place(x=random.randint(0, 1000), y=random.randint(0, 1000))
 
     def timer_function(self):
         if self.time_left > 0:
@@ -38,6 +38,8 @@ class MothersDayGame:
             self.master.after(1000, self.timer_function)
         else:
             self.instruction_text.configure(text="Game Over!", font=("Arial", 25))
+            self.end = tk.Label(master, text="I love you, Mom!", font=("Arial", 15))
+            self.end.pack(pady=10)
             self.score_label.configure(text="Final Score: {}".format(self.score), font=("Arial", 25))
             self.button.destroy()
 
